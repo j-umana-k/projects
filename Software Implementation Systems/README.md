@@ -1,21 +1,22 @@
-# Cinema Booking System
+#  Cinema Booking System
 
-A digital cinema ticket booking platform with real-time seat selection and secure payments.
+An online cinema reservation system that allows users to book movie tickets, choose seats in real time, and complete payments securely.
 
-## Project Type
+##  Project Type
 Academic group project developed as part of a Software Implementation Systems course.
 
-## Features
-- User registration and login
-- Movie browsing with showtimes and details
-- Interactive real-time seat selection
-- Secure payment integration (Credit Card, Mada, Apple Pay)
-- Digital ticket generation
+##  Features
+- User account creation and authentication
+- Browse available movies with schedules and information
+- Live seat availability and selection
+- Integrated payment options (Credit Card, Mada, Apple Pay)
+- Electronic ticket confirmation after booking
 
-## Technologies Used
+##  Technologies Used
 - Frontend: HTML, CSS, JavaScript
 - Backend: PHP
 - Database: MySQL
 
-## Notes
-This project was developed as a team-based university project. Personal details were removed for privacy.
+##  Notes
+This project was completed collaboratively as a university assignment.  
+All personal and identifying information has been excluded for privacy purposes.
