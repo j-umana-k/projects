@@ -1,0 +1,33 @@
+# 🎬 Cinema Management System
+
+A web-based application designed to manage and organize cinema-related data such as movies, genres, directors, actors, and ratings.
+
+---
+
+## 📌 Project Type
+Academic group project developed as part of a Database and Web Development course.
+
+---
+
+## ✨ Features
+- Manage movies with detailed information (title, language, release date)
+- Genre management for movie categorization
+- Director and actor management
+- Cast details for each movie
+- Movie ratings system
+- Well-structured relational database
+- UML Diagram, Chen ER Model, and Relational Schema design
+
+---
+
+## 🛠️ Technologies Used
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP  
+- **Database:** MySQL  
+- **Modeling & Design:** UML Diagram, Chen ER Model, Relational Schema  
+
+---
+
+## 📝 Notes
+This project was developed collaboratively as part of a university assignment.  
+Team member details have been omitted from this repository for privacy reasons.
