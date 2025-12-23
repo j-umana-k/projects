@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+.p-body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #000000,
+        #1a1a1a,
+        #3a3a3a,
+        #4b351266   
+    );
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.p-header {
+   width: 100%;
+    background-color: #2a2a2a; 
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+
+}
+.p-home-btn {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.p-home-btn:hover {
+    color: #d4af37;
+}
+
+.p-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: #d4af37; 
+    margin: 0;
+}
+.p-subtitle {
+    font-size: 1.5rem;
+    color: #d4af37; 
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.p-container {
+    width: 90%;
+    max-width: 450px; 
+    margin-bottom: 50px;
+}
+.p-ticket {
+    background-color: #1f1f1f; 
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    border: 1px solid #333;
+    position: relative;
+}
+.p-ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+.p-movie-name {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+}
+.p-status {
+    background-color: #4CAF50; 
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.p-info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.p-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #bbb; 
+    margin-bottom: 5px;
+}
+.p-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+}
+.p-info-row div:last-child .p-value {
+    color: #d4af37; 
+    font-size: 1.2rem;
+}
+.p-barcode {
+    background: radial-gradient(circle, #2a2a2a 0%, #000000 100%);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p-barcode img {
+    width: 80%;      
+    max-width: 250px; 
+    height: 60px;     
+    object-fit: fill;
+    filter: invert(1) opacity(0.8);   
+    margin-bottom: 10px;
+}
+.p-barcode-text {
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.p-empty {
+    text-align: center;
+    color: #bbb;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+.p-empty a {
+    color: #d4af37;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .p-container {
+        width: 95%;
+    }
+    .p-ticket {
+        padding: 20px;
+    }
+    .p-home-btn {
+        position: static;
+        display: block;
+        margin-bottom: 15px;
+    }
+}

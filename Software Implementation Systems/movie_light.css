@@ -1,0 +1,164 @@
+/* ===== Global ===== */
+body {
+    font-family: "Rubik", sans-serif;
+    background: linear-gradient(180deg, #faf7f2, #ffffff);
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Header ===== */
+.top-header {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: "Georgia", serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+/* ===== Layout ===== */
+.movie-details {
+    width: 85%;
+    margin: auto;
+}
+
+.movie-header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+
+.poster-area img {
+    width: 330px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.summary-info {
+    flex: 1;
+}
+
+/* ===== Title & Genre ===== */
+.movie-title {
+    font-family: "Georgia", serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.genre-tag {
+    background: #f5e7c8;
+    color: #7b5e17;
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.rating-box {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* ===== Quick details ===== */
+.quick-details p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+/* ===== Gold Button ===== */
+.btn-gold {
+    display: inline-block;
+    background: #d6b25e;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-gold:hover {
+    background: #b89545;
+}
+
+.btn-light {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+}
+
+.btn-light:hover {
+    background: #f3f3f3;
+}
+
+/* ===== Synopsis & Trailer ===== */
+.movie-content h2,
+.showtimes-booking h2,
+.reviews-section h2 {
+    font-family: "Georgia", serif;
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.movie-content p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* ===== Showtimes ===== */
+.showtime-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.showtime-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.showtime-card p {
+    margin: 5px 0;
+}
+
+/* ===== Reviews ===== */
+.add-review,
+.review-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.add-review select,
+.add-review textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #777;
+}

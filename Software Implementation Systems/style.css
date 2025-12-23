@@ -1,0 +1,687 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   1) UNIFIED STYLE FOR ALL PAGES (NO CLASS NAMES)
+   ============================================================ */
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #000000,
+        #1a1a1a,
+        #3a3a3a,
+        #4b351266
+    );
+    color: #fff;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/*header stylr*/
+
+.top-header{
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Centering the "movie title" text */
+.page-title {
+    flex: 1;
+    text-align: center;
+}
+
+
+
+h1, h2 {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #d4af37;
+}
+
+/* BOX — unified */
+.box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* BUTTONS — unified gold */
+.next-btn,
+.pay-btn,
+.book-now-btn {
+    display: block;
+    width: 100%;
+    background-color: #d4af37;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.next-btn:hover,
+.pay-btn:hover,
+.book-now-btn:hover {
+    background-color: #b89630;
+}
+
+.next-btn:disabled {
+    background: #8d8d8d;
+    cursor: not-allowed;
+}
+
+/* INPUT FIELDS — unified style for enabled/disabled */
+input[type="text"],
+input[type="month"],
+input[type="password"] {
+    width: 96%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d4af37;
+    margin-top: 5px;
+}
+
+input:disabled {
+    background: #e4e4e4;
+    color: #888;
+}
+/* Footer Style*/
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.6); 
+    color: #d4af37;
+    font-size: 14px;
+background: linear-gradient(135deg, #2f2f2f, #666666, #d4af37);
+color: #fff;
+border-top: 1px solid rgba(212, 175, 55, 0.4);
+    margin-top: 40px;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* ============================================================
+   2) BOOKING PAGE UNIQUE STYLES
+   ============================================================ */
+/* Background and layout for Booking page only */
+.booking_page {
+    min-height: 100vh; /* يغطي كامل الشاشة */
+    background: linear-gradient(
+        135deg,
+        #000000,
+        #1a1a1a,
+        #3a3a3a,
+        #4b351266
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking_page .main-container {
+    width: 70%; /* كما في كودك الأصلي */
+    margin: 0 auto; /* يوسّط الحاوية */
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+}
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    width:20%; 
+}
+
+.showtime-container,
+.hall-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    width: 60%;
+}
+
+.seats-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.screen {
+    width: 70%;
+    max-width: 500px;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-top: 5px solid #888;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 10px;
+    color: #ccc;
+}
+
+/* Seating Area */
+.seating-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.row-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.row-label {
+    font-weight: bold;
+    font-size: 18px;
+    min-width: 15px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.seat {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+    background-image:url(images/seat.png) ;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.seat.reserved {
+    background-color: #b5b5b5;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #d4af37;
+    transform: scale(1.1);
+}
+
+/* LEGEND */
+.legend {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-seat {
+    width: 16px;
+    height: 16px;
+    border-radius: 6px;
+}
+
+.legend-seat.available { background-color: white; }
+.legend-seat.selected { background-color: #d4af37; }
+.legend-seat.reserved { background-color: #b5b5b5; }
+
+.showtime-option,
+.hall-option {
+    background-color: #333;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    min-width: 90px;
+    text-align: center;
+    transition: 0.25s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+    pointer-events: auto; 
+}
+
+.showtime-option.selected,
+.hall-option.selected {
+background-color: #d4af37; 
+    color: black;
+    transform: translateY(-3px);
+}
+
+.seat.reserved {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.totalPriceDisplay{
+ display: inline-block;          
+    padding: 10px 30px;              
+    border-radius: 12px;             
+     background: rgba(255,255,255,0.09); 
+    border: 1px solid #d4af37;     
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    min-width: 350px;  
+    margin-bottom:20px;
+}
+/* زر العودة للهوم */
+.back-home-btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    min-width: 100px; 
+    font-weight: bold;
+    transition: 0.25s;
+    margin-top: 20px;
+}
+
+.back-home-btn:hover {
+    background-color: #b89630;
+}
+
+
+
+/* ============================================================
+   3) PAYMENT PAGE UNIQUE STYLES — PUT IN A CLASS
+   ============================================================ */
+
+.payment-page {
+    max-width: 500px;
+    margin: auto;
+    padding: 40px 20px;  
+    background: transparent;
+}
+
+.payment-page .methods {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.payment-page .methods label {
+    text-align: center;
+    cursor: pointer;
+}
+
+.payment-page .methods img {
+    width: 60px;
+    height: 40px;
+    object-fit: contain;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: rgba(255,255,255,0.1);
+}
+
+.payment-page input[type="radio"]:checked + img {
+    border-color: #d4af37;
+    background: rgba(255,255,255,0.25);
+}
+.payment-page label{
+display: flex;          
+    flex-direction: column; 
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Payment form inputs (specific to payment page only) */
+.payment-page input[type="text"],
+.payment-page input[type="month"],
+.payment-page input[type="password"] {
+    width: 96%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d4af37;
+    margin-top: 15px;
+}
+.payment-page .pay-btn{
+margin-top: 20px;
+}
+
+.payment-page .cancel-btn{
+   background-color: #d4af37;      
+    color: white;
+    padding: 12px;                    
+    font-size: 15px;            
+   border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.payment-page .cancel-btn:hover {
+    background-color: #b89630;
+
+}
+
+
+/* ============================================================
+   4) BOOKING CONFIRMATION UNIQUE STYLES — CLASS
+   ============================================================ */
+/* background image*/
+.confirmation-page body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;      
+    margin: 0;
+    padding: 0;
+}
+
+.confirmation-page main.box {
+    width: 420px;           
+    margin: 20px auto; 
+    border-radius: 18px;    
+    padding: 30px;
+    background: rgba(255,255,255,0.09);  
+    backdrop-filter: blur(6px);
+}
+
+.confirmation-page #ticket {
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 25px;
+    text-align: left;
+}
+
+.confirmation-page #ticket p {
+    margin: 10px 0;
+}
+
+/* Small ticket-style poster in confirmation page */
+.confirmation-page .poster-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.confirmation-page .poster-container img {
+    width: 140px;            
+    border-radius: 12px;   
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); 
+    object-fit: cover;
+}
+
+
+/* ============================================================
+   5) SIGNUP & LOGIN UNIQUE STYLES 
+   ============================================================ */
+.signup{
+    font-family: Arial, sans-serif;
+  background-color: #1d1f23;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.login{
+ font-family: Arial, sans-serif;
+  background-color: #1d1f23;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.login-container, .signup-container {
+  width: 100%;
+  max-width: 400px;
+  height: 80%;
+  margin: 0;
+  background-color: #2c2f36;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #d4af37;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #d4af37;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #b89630;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.signup-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.login-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.signup-container p,
+.login-container p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* ============================================================
+   6) DETAILS UNIQUE STYLES 
+   ============================================================ */
+   /* Updated styles for details page integration */
+
+.movie-details {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.movie-summary {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.movie-summary .poster img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+
+}
+
+.genre-tag {
+  display: inline-block;
+  background: #d4af37;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.rating-box {
+  font-size: 22px;
+  background: rgba(255,255,255,0.08);
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.25);
+  margin: 10px 0;
+}
+
+.trailer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.trailer-container iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.review-item {
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  margin-bottom: 15px;
+}
+
+.book-now-btn{
+    width: 100%;  
+}
+.add-review-box {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stars {
+    font-size: 30px;
+    direction: ltr; 
+}
+
+.star {
+    cursor: pointer;
+    color: #555; 
+    transition: color 0.2s;
+}
+
+.star.active {
+    color: #f5a623; 
+}
+
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-review-btn {
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.submit-review-btn:hover {
+    background-color: #b89630;
+}
